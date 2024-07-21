@@ -2,7 +2,7 @@
 [Talmee7 Platform](https://talmee7.drolez-apps.cloud)
 
 ## Overview
-`Talmee7` is an online platform fetches content from all Ncms Instances
+`Talmee7` is an online platform fetches content from all Ncms Instances and packages them in groups of teachers, chapters, etc... This helps `create packaged contents` and make better offers for students.
 
 ## My Role
 > 1. Software Architect
@@ -12,33 +12,26 @@
 1. `3-tier` architecture
 2. `Arte PHP API`
 3. `MySQL`
-4. Secure Communication to all Ncms Instances
-4. `AWS S3 Buckets` to host huge session files
-5. `REST API`
-6. UI built in `components` structure for reusability & organization
-7. `Bootstrap` & `jQuery` UI
-8. Documented on `Postman`
+4. `Secure Tunnel` communication to all Ncms Instances
+6. `NextJS`
+7. `Flutter` Mobile App
+8. `Python Automation`
+
 
 ## Features
-### Managerial Aspects
-1. Students register and apply to join learning groups
-2. Admins Review and Approve/reject the student or recommends other groups for him
-3. Subscription fees are automatically calculated and notifies both admins and users about due dates.
-4. Statistical Dashboard to view students' peroformance throughout the year
+### Talmee7 Admin Dashboard
+1. Links Ncms instances with talmee7
+2. Displays/Manages all linked instances' content to be structured and featured on talmee7
+3. Admin can create packages, add content to it from linked instances, and manage all other information like subscription fees, etc...
+4. Python Automation Script automates content upload, package creation, and others. This script can be run on multiple servers and all of them are trackable from the dashboard
 
-### Online Content
-1. Admin can organize his content in the form of courses
-2. Courses are protected with `access codes`
-3. Online sessions can include `exams` and `homeworks` with due dates
-4. The admin can construct his question bank that he can then use to build exams and homeworks
-5. Automated Marking
-
-### Society & Utilities
-1. Chat System
-2. Posts & Announcements
-3. Calendar for every user reminds him of his duties
+### Front Views
+1. Smart Wallet
+2. Session Content Views
+3. Exams and Homeworks
+4. Student Stats
 
 ## Back-end (Technical Keypoints)
-1. SAAS nature allows instantiating separated instances for every client with dedicated database and FHS
-2. S3 buckets allows hosting terabytes of content without worrying about performance, access time, or memory usage
-3. Generating stats for students at the moment the exam ends was too slow especially that many students access exam results at the same time putting too much load on the server. So I adjusted Arte to be able to close the TCP connection, outputs the response buffer, and continue processing to provide the client with immediate response and informs him about `still processing` status. That was the first brick into building Arte powerful background processes wrappers.
+1. After releasing Talmee7, many teachers joined the platform and content size spiked to more than 100 GB in special weeks. As a result, we implemented a `python automation script` that allows uploading files `24/7 on multiple servers` (typically 3 servers). The script was greatly error-tolerant that even under poor internet conditions, it was able to finish the upload in a reasonable time. It also provided trackers with great feedback so that we can track it over from anywhere.
+2. Connecting Talmee7 to all Ncms Instances required designing a `one-way authorization in Ncms` allows only Talmee7 server to access their data. Even Talmee7 wasn't able to access teacher's protected content that he selects by himself.
+3. The biggest challenge we faced is that we built this platform in a single month work.
