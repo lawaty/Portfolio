@@ -28,7 +28,7 @@ Arte-Client is a light-weight jQuery-based front-end framework aims to get the m
 Although Arte Client is a recent Front-end framework, it has been used to build around 10 apps including:
 - Ncms SAAS Instances
 - Auto Trader: Have a look at Auto-Trade/Readme.md
-- [HpEMR Admin Dashboard](admin.hpemr.ca): built completely with Arte with Arte aws plugin to communicate with aws lambda and dynamo db.
+- [HpEMR Admin Dashboard](https://admin.hpemr.ca): built completely with Arte with Arte aws plugin to communicate with aws lambda and dynamo db.
 - [Ip Geeks Cordova Mobile APP](https://cordovel.com/apps/conversational/www/)
 - [Mynty Dashboard](https://mynty.gg/mynty-client)
 - [Timeplanner](https://timeplanner.drolez-apps.cloud)

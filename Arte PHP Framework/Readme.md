@@ -53,7 +53,7 @@ Arte's framework leverages the `Entity` and `Mapper` classes to provide a struct
 
 Proudly, Arte has been used to build over 30 web apps so far including the following:
 - Ncms SAAS Instances
-- [Mynty Collections](mynty.gg): integrated with an existing wordpress system
+- [Mynty Collections](https://mynty.gg): integrated with an existing wordpress system
 - [Auto Trader](https://auto-trader.drolez-apps.cloud): Have a look at Auto-Trade/Readme.md
 - [HpEMR](https://stg.hpemr.ca): integrated with an existing Symphony system
 - HpEMR Dashboard API: built completely with Arte with Arte aws plugin to communicate with aws lambda and dynamo db.
